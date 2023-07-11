@@ -2,18 +2,17 @@ print("Welcome to the Love Calculator!")
 name1 = input("What is your name? \n")
 name2 = input("What is their name? \n")
 
-name1 = name1.lower()
-name2 = name2.lower()
+name = (f"{name1.lower()}{name2.lower()}")
 
-name1Amount = name1.count('t') + name1.count('r') + name1.count('u') + name1.count('e') + name1.count('l') + name1.count('o') + name1.count('v') 
-name2Amount = name2.count('t') + name2.count('r') + name2.count('u') + name2.count('e') + name2.count('l') + name2.count('o') + name2.count('v') 
+trueAmount = name.count('t') + name.count('r') + name.count('u') + name.count('e')
+loveAmount = name.count('l') + name.count('o') + name.count('v') + name.count('e')
 
-nameAmount = int(f"{name1Amount}{name2Amount}")
+nameAmount = int(f"{trueAmount}{loveAmount}")
 
 if nameAmount <= 10 or nameAmount >= 90:
   print(f"Your score is {nameAmount}, you go together like coke and mentos.")
 
-elif nameAmount <= 40 and nameAmount >= 50:
+elif nameAmount >= 40 and nameAmount <= 50:
   print(f"Your score is {nameAmount}, you are alright together.")
 
 else: 
